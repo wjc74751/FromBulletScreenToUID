@@ -3,13 +3,13 @@ import os
 
 CRCTableFiles = []
 
-os.mkdir("FromBulletScreenToUID/CRCTable") #二级检索
+os.mkdir("FromBulletScreenToUID-main/CRCTable") #二级检索
 for j in range(1,10):
-    os.mkdir(f"FromBulletScreenToUID/CRCTable/{j}")
+    os.mkdir(f"FromBulletScreenToUID-main/CRCTable/{j}")
     CRCTableFiles.append([])
     for k in range(10):
-        os.mkdir(f"FromBulletScreenToUID/CRCTable/{j}/{k}")
-        CRCTableFiles[j-1].append(open(f"FromBulletScreenToUID/CRCTable/{j}/{k}/CRCTable.txt","w"))
+        os.mkdir(f"FromBulletScreenToUID-main/CRCTable/{j}/{k}")
+        CRCTableFiles[j-1].append(open(f"FromBulletScreenToUID-main/CRCTable/{j}/{k}/CRCTable.txt","w"))
     
 for i in range(0,100000000):
     crc32Value = crc32(str(i).encode('utf-8'))

@@ -6,7 +6,7 @@ CRCTableFiles = []
 for j in range(1,10):
     CRCTableFiles.append([])
     for k in range(10):
-        CRCTableFiles[j-1].append(open(f"FromBulletScreenToUID/CRCTable/{j}/{k}/CRCTable.txt","r"))
+        CRCTableFiles[j-1].append(open(f"FromBulletScreenToUID-main/CRCTable/{j}/{k}/CRCTable.txt","r"))
 
 cid=input("cid:")
 targetBulletScreen = input("bulletScreen:")
