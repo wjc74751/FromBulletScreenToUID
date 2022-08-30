@@ -1,4 +1,3 @@
-import re
 from zlib import crc32
 import os
 
