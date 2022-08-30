@@ -29,29 +29,29 @@ for i in range(len(bulletScreens)):
         if (len(hashedUID) < 2):
             for line in CRCTableFiles[0]:
                 if (line.split(",")[0] == hashedUID):
-                    UID = (line.split(",")[1])
+                    UID = int(line.split(",")[1],16)
                     print("found target UID")
-                    print("UID: " + UID) 
+                    print("UID: " + str(UID)) 
                     break
         elif (len(hashedUID) < 3):
             for line in CRCTableFiles[int(hashedUID[0],16)][0]:
                 if (line.split(",")[0] == hashedUID[1:]):
-                    UID = (line.split(",")[1])
+                    UID = int(line.split(",")[1],16)
                     print("found target UID")
-                    print("UID: " + UID) 
+                    print("UID: " + str(UID)) 
                     break
         elif (len(hashedUID) < 4):
             for line in CRCTableFiles[int(hashedUID[0],16)][int(hashedUID[1],16)+1][0]:
                 if (line.split(",")[0] == hashedUID[2:]):
-                    UID = (line.split(",")[1])
+                    UID = int(line.split(",")[1],16)
                     print("found target UID")
-                    print("UID: " + UID) 
+                    print("UID: " + str(UID)) 
                     break
         else:
             for line in CRCTableFiles[int(hashedUID[0],16)][int(hashedUID[1],16)+1][int(hashedUID[2],16)+1]:
                 if (line.split(",")[0] == hashedUID[3:]):
                     UID = int(line.split(",")[1],16)
                     print("found target UID")
-                    print("UID: " + str(UID)) #想借用我同学自我介绍时的一句话：我来这里就是想卷死在坐的各位 812803012
+                    print("UID: " + str(UID)) 
                     break
         
